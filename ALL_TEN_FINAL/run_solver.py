@@ -29,7 +29,7 @@ def run():
             return
 
     # prints the solution
-    print("")
+    print()
     solution = solver(game)
     if solution is None:
         print(f"The game: {game}\nhas no solution")
