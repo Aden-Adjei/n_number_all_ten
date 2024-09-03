@@ -115,14 +115,3 @@ def solver(game):
     except IndexError:
         return sols
     return None
-
-
-inputs = set()
-for i in range(10):
-    for j in range(10):
-        for k in range(10):
-            if solver((i,j,k)):
-                inputs.add(frozenset((i,j,k)))
-
-for input in inputs:
-    print (input)
