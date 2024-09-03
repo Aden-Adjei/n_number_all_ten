@@ -2,7 +2,7 @@ from all_ten_solver import solver
 from all_ten import gen_puzzle
 def run():
     game = input("Input the game you want to solve or the size "
-            + "of the puzzle if you the solution to a random game ")
+            + "of the puzzle if you want the solution to a random game ")
 
     # creates random game
     if game.isnumeric():
@@ -29,7 +29,7 @@ def run():
             return
 
     # prints the solution
-    print("\n\n")
+    print("")
     solution = solver(game)
     if solution is None:
         print(f"The game: {game}\nhas no solution")
