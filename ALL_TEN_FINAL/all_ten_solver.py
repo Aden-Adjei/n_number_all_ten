@@ -7,7 +7,7 @@ def solver(game):
     given a game represented as a set of numbers
     that can be used to make all ten,
     and a start_state represented as a set
-    of already found nubmers, returns a solution
+    of already found numbers, returns a solution
     as a dictionary mapping found numbers to expressions
     """
     to_find = ALL_TEN.copy()
@@ -107,7 +107,7 @@ def solver(game):
                 # stops search if all ten numbers are found
                 if not to_find:
                     raise IndexError
-                return
+        return
 
     # finds and returns the solutions
     try:
@@ -115,3 +115,14 @@ def solver(game):
     except IndexError:
         return sols
     return None
+
+
+inputs = set()
+for i in range(10):
+    for j in range(10):
+        for k in range(10):
+            if solver((i,j,k)):
+                inputs.add(frozenset((i,j,k)))
+
+for input in inputs:
+    print (input)
