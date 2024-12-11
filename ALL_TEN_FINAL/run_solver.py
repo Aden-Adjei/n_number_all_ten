@@ -34,6 +34,7 @@ def run():
     if solution is None:
         print(f"The game: {game}\nhas no solution")
     else:
-        print(f"The solution to {game} is:\n{solution}", [eval(elem) for elem in solution] == [1,2,3,4,5,6,7,8,9,10])
+        print(f"The solution to {game} is:\n{solution}"
 
-run()
+if __name__ == "__main__":
+    run()
